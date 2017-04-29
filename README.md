@@ -1,5 +1,5 @@
 # KaggleDatabaseLoader
-Several Python scripts to load data from csv's into a MySQL database
+Python script to load data from csv's into a MySQL database
 
 Needed CSV files are found in these Datasets from kaggle.com:
 
@@ -13,3 +13,9 @@ Exoplanet Hunting in Deep Space
 
 At the top of the file, there is a function called dbstuff, you must enter your information for your database there.
 In main, you must enter the file paths to each csv file, I have not changed the names of those files in the functions.
+
+The hostname, user name, shorthand username, and databse should be setup beforehand, begin by typing: 
+
+mysql -u root -p
+
+then setup the database from there.
