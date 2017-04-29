@@ -14,8 +14,16 @@ Exoplanet Hunting in Deep Space
 At the top of the file, there is a function called dbstuff, you must enter your information for your database there.
 In main, you must enter the file paths to each csv file, I have not changed the names of those files in the functions.
 
-The hostname, user name, shorthand username, and databse should be setup beforehand, begin by typing: 
+The hostname, user name, shorthand username, and databse should be setup beforehand, begin by typing:
 
 mysql -u root -p
 
 then setup the database from there.
+
+If you do not have MySQLdb, you can install it with pip:
+pip install MySQL-python
+
+If you do not have pip:
+apt-get install python-dev libmysqlclient-dev
+apt-get install python-pip
+pip install MySQL-python
