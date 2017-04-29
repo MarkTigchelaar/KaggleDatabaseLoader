@@ -21,9 +21,13 @@ mysql -u root -p
 then setup the database from there.
 
 If you do not have MySQLdb, you can install it with pip:
+
 pip install MySQL-python
 
 If you do not have pip:
+
 apt-get install python-dev libmysqlclient-dev
+
 apt-get install python3-pip
+
 pip install MySQL-python
