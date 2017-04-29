@@ -77,7 +77,7 @@ def makeIrisTables():
     TableColumns = "Id int, SepalLengthCm float, SepalWidthCm float, PetalLengthCm float, \
                     PetalWidthCm float, Species varchar(15)"
     cursor.execute("create table if not exists iris (" + TableColumns + ")")
-    database.colse()
+    database.close()
 
 
 
