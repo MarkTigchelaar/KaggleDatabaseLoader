@@ -25,5 +25,5 @@ pip install MySQL-python
 
 If you do not have pip:
 apt-get install python-dev libmysqlclient-dev
-apt-get install python-pip
+apt-get install python3-pip
 pip install MySQL-python
