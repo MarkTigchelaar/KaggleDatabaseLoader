@@ -44,6 +44,7 @@ def loadIris(File):
     for i in range(len(List)):
         print('loading record ' + str(i + 1))
         loader(List[i].split(','), cursor, database)
+    database.close()
 
 
 def loader(record, cursor, database):
@@ -76,6 +77,7 @@ def makeIrisTables():
     TableColumns = "Id int, SepalLengthCm float, SepalWidthCm float, PetalLengthCm float, \
                     PetalWidthCm float, Species varchar(15)"
     cursor.execute("create table if not exists iris (" + TableColumns + ")")
+    database.colse()
 
 
 
