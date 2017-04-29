@@ -30,4 +30,10 @@ apt-get install python-dev libmysqlclient-dev
 
 apt-get install python3-pip
 
+OR:
+
+wget https://bootstrap.pypa.io/get-pip.py
+
+sudo python3 get-pip.py 
+
 pip install MySQL-python
