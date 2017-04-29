@@ -4,7 +4,9 @@ Several Python scripts to load data from csv's into a MySQL database
 Needed CSV files are found in these Datasets from kaggle.com:
 
 Iris Species
+
 Human Resources Analytics
+
 Exoplanet Hunting in Deep Space
 
 ... more to come in the following months.
