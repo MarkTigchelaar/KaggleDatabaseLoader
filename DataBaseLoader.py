@@ -32,6 +32,7 @@ def irisLoader(path):
         print('Loading complete.')
     except:
         print("Iris table failed to load.")
+        dropIrisTables()
 
 
 def loadIris(File):
@@ -44,6 +45,7 @@ def loadIris(File):
     for i in range(len(List)):
         print('loading record ' + str(i + 1))
         loader(List[i].split(','), cursor, database)
+    cursor.close()
     database.close()
 
 
@@ -68,6 +70,7 @@ def dropIrisTables():
     print('dropping iris table if present')
     cursor, database = dbstuff()
     cursor.execute("drop table if exists iris")
+    cursor.close()
     database.close()
 
 
@@ -77,6 +80,7 @@ def makeIrisTables():
     TableColumns = "Id int, SepalLengthCm float, SepalWidthCm float, PetalLengthCm float, \
                     PetalWidthCm float, Species varchar(15)"
     cursor.execute("create table if not exists iris (" + TableColumns + ")")
+    cursor.close()
     database.close()
 
 
@@ -113,6 +117,7 @@ def dropHR():
     print('dropping HRtable if present')
     cursor, database = dbstuff()
     cursor.execute("drop table if exists HRStats")
+    cursor.close()
     database.close()
 
 
@@ -123,6 +128,7 @@ def makeHR():
                     NumOfProjects int, MonthlyHrs int, CompanyTime int, \
                     WorkAccident int, Quit int, Promotion5yrs int, \
                     Dept varchar(12), Salary varchar(7))")
+    cursor.close()
     database.close()
 
 
@@ -159,6 +165,7 @@ def sendIt(List):
             print('loading row ' + str(row) + '/' + total + " into HRtable")
             print("Loading... please wait...")
         row += 1
+    cursor.close()
     database.close()
 
 
@@ -206,6 +213,7 @@ def loadTables(File, table):
             print('loading row ' + str(row) + '/' + total + " into " + table + " tables")
             print("Loading... please wait...")
         row += 1
+    cursor.close()
     database.close()
 
 
@@ -293,6 +301,7 @@ def makeKeplerTables():
         cursor.execute("alter table KeplerTrain4 add unique index8 (ID)")
     except:
         print("Index exists, or tables do not exist")
+    cursor.close()
     database.close()
 
 
@@ -307,6 +316,7 @@ def dropKeplerTables():
     cursor.execute("drop table if exists KeplerTrain3")
     cursor.execute("drop table if exists KeplerTest4")
     cursor.execute("drop table if exists KeplerTrain4")
+    cursor.close()
     database.close()
 
 
