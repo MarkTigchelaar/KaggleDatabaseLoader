@@ -257,13 +257,13 @@ def loadTables(File, table):
     while length > 0:
         current = Listlist.pop(length - 1)
         name = table + '1'
-        load(current, name, colTable1, cursor, database)
+        load(current, name, colTable1, 0, 800, cursor, database)
         name = table + '2'
-        load(current, name, colTable2, cursor, database)
+        load(current, name, colTable2, 800, 1600, cursor, database)
         name = table + '3'
-        load(current, name, colTable3, cursor, database)
+        load(current, name, colTable3, 1600, 2400, cursor, database)
         name = table + '4'
-        load(current, name, colTable4, cursor, database)
+        load(current, name, colTable4, 2400, 3197, cursor, database)
         length -= 1
         if row % 100 == 0:
             print('loading row ' + str(row) + '/' + total + " into " + table + " tables")
@@ -279,10 +279,10 @@ def loadTables(File, table):
     as the large numbers of actual data items for each individual record.
     This function will be updated later on to use the MySQLdb function insert many
     for speed increases.
-    Inputs: A list of lists, table name, string of colNames, cursor object,
+    Inputs: A list of lists, table name, start column, stop columns, string of colNames, cursor object,
     database connector object.
 """
-def load(List, table, colTable, cursor, database):
+def load(List, table, colTable, start, stop, cursor, database):
     cursor.execute("insert into " + table + " ( " + colTable + ") values (" + items(List, start, stop) + " )")
     database.commit()
 
