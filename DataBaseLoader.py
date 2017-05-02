@@ -1,8 +1,8 @@
 import MySQLdb
 
-#       You must specify your localhost, login name, and shorthand name for MySQL
-#       as well as the Database you are inserting into.
-#       This is to be setup beforehand while logged into MySQL.
+#You must specify your localhost, login name, and shorthand name for MySQL
+#as well as the Database you are inserting into.
+#This is to be setup beforehand while logged into MySQL.
 def dbstuff():
     database = MySQLdb.connect('localhost', 'your MySQL username', 'short hand username', 'Database name')
     return database.cursor(), database
