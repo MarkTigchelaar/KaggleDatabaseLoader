@@ -11,8 +11,9 @@ Exoplanet Hunting in Deep Space
 
 ... more to come in the following months.
 
-At the top of the file, there is a function called dbstuff, you must enter your information for your database there.
+There is a file called dbconnection.py, you must enter your information for your database there.
 In main, you must enter the file paths to each csv file, I have not changed the names of those files in the functions.
+This is due to the fact that each file is made specifically for each csv file.
 
 The hostname, user name, shorthand username, and databse should be setup beforehand, begin by typing:
 
@@ -34,4 +35,4 @@ OR:
 
 wget https://bootstrap.pypa.io/get-pip.py
 
-sudo python3 get-pip.py 
+sudo python3 get-pip.py
