@@ -7,7 +7,7 @@ def main():
     path = ''# all CSVs need to be in same folder
     irisLoader(path)
     HRLoader(path)
-    KeplerFluxLoader(path)
+    #KeplerFluxLoader(path)
     #dropAll()
 
 def dropAll():

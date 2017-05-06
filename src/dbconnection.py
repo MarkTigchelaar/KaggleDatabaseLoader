@@ -5,10 +5,10 @@ import MySQLdb
 #This is to be setup beforehand while logged into MySQL.
 
 host = 'localhost'
-username = 'usrname'
+username = 'you'
 password = 'password'
-database = 'Database name'
+db = 'Database name'
 
 def dbstuff():
-    database = MySQLdb.connect(host, username, password, database)
+    database = MySQLdb.connect(host, username, password, db)
     return database.cursor(), database
